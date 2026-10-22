@@ -1,0 +1,128 @@
+
+[
+  {
+    "id": "BUG-001",
+    "difficulty": "easy",
+    "bug_report": "The shopping cart subtotal is calculated incorrectly.",
+    "relevant_functions": [
+      "cart.py::ShoppingCart.calculate_subtotal"
+    ]
+  },
+  {
+    "id": "BUG-002",
+    "difficulty": "easy",
+    "bug_report": "Removing an item from the cart does not work.",
+    "relevant_functions": [
+      "cart.py::ShoppingCart.remove_item"
+    ]
+  },
+  {
+    "id": "BUG-003",
+    "difficulty": "easy",
+    "bug_report": "The percentage discount calculation returns the wrong price.",
+    "relevant_functions": [
+      "discounts.py::DiscountEngine.apply_percentage_discount"
+    ]
+  },
+  {
+    "id": "BUG-004",
+    "difficulty": "easy",
+    "bug_report": "The payment transaction fee is incorrect.",
+    "relevant_functions": [
+      "payments.py::PaymentProcessor.calculate_transaction_fee"
+    ]
+  },
+  {
+    "id": "BUG-005",
+    "difficulty": "easy",
+    "bug_report": "The inventory system does not correctly reserve stock.",
+    "relevant_functions": [
+      "inventory.py::InventoryManager.reserve_stock"
+    ]
+  },
+  {
+    "id": "BUG-006",
+    "difficulty": "medium",
+    "bug_report": "Customers are receiving less money back than expected when returning an order.",
+    "relevant_functions": [
+      "payments.py::PaymentProcessor.process_refund"
+    ]
+  },
+  {
+    "id": "BUG-007",
+    "difficulty": "medium",
+    "bug_report": "The warehouse shows products as available even when there are not enough units.",
+    "relevant_functions": [
+      "inventory.py::InventoryManager.check_availability"
+    ]
+  },
+  {
+    "id": "BUG-008",
+    "difficulty": "medium",
+    "bug_report": "The number of products displayed in the basket is wrong.",
+    "relevant_functions": [
+      "cart.py::ShoppingCart.count_items"
+    ]
+  },
+  {
+    "id": "BUG-009",
+    "difficulty": "medium",
+    "bug_report": "A promotional code is accepted even though the minimum purchase requirement is not met.",
+    "relevant_functions": [
+      "discounts.py::DiscountEngine.validate_coupon"
+    ]
+  },
+  {
+    "id": "BUG-010",
+    "difficulty": "medium",
+    "bug_report": "The system allows customers to proceed with an empty order.",
+    "relevant_functions": [
+      "checkout.py::validate_checkout"
+    ]
+  },
+  {
+    "id": "BUG-011",
+    "difficulty": "hard",
+    "bug_report": "Customers are charged too much after discounts and taxes are applied.",
+    "relevant_functions": [
+      "discounts.py::DiscountEngine.apply_percentage_discount",
+      "checkout.py::calculate_final_price"
+    ]
+  },
+  {
+    "id": "BUG-012",
+    "difficulty": "hard",
+    "bug_report": "The final amount paid differs from the value calculated during checkout.",
+    "relevant_functions": [
+      "checkout.py::calculate_final_price",
+      "payments.py::PaymentProcessor.calculate_total_charge"
+    ]
+  },
+  {
+    "id": "BUG-013",
+    "difficulty": "hard",
+    "bug_report": "An order is accepted even when the customer has insufficient funds or the payment details are invalid.",
+    "relevant_functions": [
+      "payments.py::PaymentProcessor.validate_payment",
+      "checkout.py::validate_checkout"
+    ]
+  },
+  {
+    "id": "BUG-014",
+    "difficulty": "hard",
+    "bug_report": "Stock levels become incorrect when products are added and later returned to inventory.",
+    "relevant_functions": [
+      "inventory.py::InventoryManager.add_stock",
+      "inventory.py::InventoryManager.release_stock"
+    ]
+  },
+  {
+    "id": "BUG-015",
+    "difficulty": "hard",
+    "bug_report": "The total basket amount does not reflect the quantity of each purchased product and its promotional reduction.",
+    "relevant_functions": [
+      "cart.py::ShoppingCart.calculate_subtotal",
+      "discounts.py::DiscountEngine.apply_percentage_discount"
+    ]
+  }
+]

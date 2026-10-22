@@ -1,0 +1,38 @@
+
+[
+  {
+    "id": "BUG-001",
+    "bug_report": "The shopping cart calculates the wrong total price.",
+    "relevant_functions": [
+      "shopping_shelf.calculate_total_price"
+    ]
+  },
+  {
+    "id": "BUG-002",
+    "bug_report": "Adding a product does not update the shopping cart.",
+    "relevant_functions": [
+      "shopping_shelf.add_item"
+    ]
+  },
+  {
+    "id": "BUG-003",
+    "bug_report": "A new shopping cart starts with an incorrect item list.",
+    "relevant_functions": [
+      "shopping_shelf.__init__"
+    ]
+  },
+  {
+    "id": "BUG-004",
+    "bug_report": "The sum of product prices is incorrect.",
+    "relevant_functions": [
+      "shopping_shelf.calculate_total_price"
+    ]
+  },
+  {
+    "id": "BUG-005",
+    "bug_report": "The cart fails to store newly added items.",
+    "relevant_functions": [
+      "shopping_shelf.add_item"
+    ]
+  }
+]
